@@ -15,12 +15,7 @@ public class Main {
         int b = 2;
         System.out.println(a+b);
         new Main().welcomeB(); /* created these for learning debug points */
-        SingleTonPattern obj1 = SingleTonPattern.SingleTonPatternObjFetcher();
-        SingleTonPattern obj2 = SingleTonPattern.SingleTonPatternObjFetcher();
-        System.out.println("object count is");
-        System.out.println(SingleTonPattern.objectCount);
-
-
+        new SingleTonPattern();
     }
 
 }
