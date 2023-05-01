@@ -1,7 +1,6 @@
 package implClasses;
 
 import lombok.Data;
-import org.example.SingleTonPattern;
 
 @Data
 public class SingleTonPatternImpl {
