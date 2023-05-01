@@ -4,5 +4,5 @@ DesignPatterns are mainly classied into four types :
 3. Behavioral pattern
 4. J2EE pattern
 
-Creational pattern
+Creational pattern : 
   In these patterns, the main concentration will be on creating objects without using the new keyword.
