@@ -1,7 +1,12 @@
 package org.example;
 
 public class AbstractFactoryMethodApi {
-
+    AbstractFactoryMethodApi()
+    {
+        AnimalFactory animalFactory = new DogFactory();
+        animalFactory.createAnimal().doAnimalAction();
+        animalFactory.createAnimalFood().produceAnimalFood();
+    }
 }
 
 /*
