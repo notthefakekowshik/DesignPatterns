@@ -3,21 +3,21 @@ package implClasses;
 import lombok.Data;
 
 @Data
-public class SingleTonPatternImpl {
+public class SingleTonPatternImplEagerIni {
     public static int objectCounterAsClassVariable;
     /*
         1. Make the constructor private and create instance with private access.
      */
 
-    private static SingleTonPatternImpl SingleTonPatternImplObj;
+    private static SingleTonPatternImplEagerIni SingleTonPatternImplObj;
     public static int objectCount;
-    private SingleTonPatternImpl()
+    private SingleTonPatternImplEagerIni()
     {
 
     }
-    public static SingleTonPatternImpl SingleTonPatternObjFetcher() {
+    public static SingleTonPatternImplEagerIni SingleTonPatternObjFetcher() {
         if (SingleTonPatternImplObj == null) {
-            SingleTonPatternImplObj = new SingleTonPatternImpl();
+            SingleTonPatternImplObj = new SingleTonPatternImplEagerIni();
             objectCounterAsClassVariable += 1;
         }
         return SingleTonPatternImplObj;
