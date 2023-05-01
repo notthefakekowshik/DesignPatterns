@@ -24,6 +24,9 @@ public class Main {
         {
             System.out.println("select either axis or hdfc or icici in capitals");
         }
+        AnimalFactory animalFactory = new DogFactory();
+        animalFactory.createAnimal().doAnimalAction();
+        animalFactory.createAnimalFood().produceAnimalFood();
 
     }
 
