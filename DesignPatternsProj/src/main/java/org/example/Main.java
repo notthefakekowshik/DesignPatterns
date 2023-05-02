@@ -25,6 +25,7 @@ public class Main {
             System.out.println("select either axis or hdfc or icici in capitals");
         }
         new AbstractFactoryMethodApi();
+        new TestClass().testInterface1Method();
+        new TestClass().testInterface2Method();
     }
-
 }
