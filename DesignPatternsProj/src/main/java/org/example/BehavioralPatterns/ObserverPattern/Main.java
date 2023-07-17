@@ -1,4 +1,4 @@
-package org.example.ObserverPattern;
+package org.example.BehavioralPatterns.ObserverPattern;
 
 public class Main {
 

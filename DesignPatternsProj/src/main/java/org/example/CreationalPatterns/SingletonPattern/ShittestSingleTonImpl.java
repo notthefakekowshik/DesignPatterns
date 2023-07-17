@@ -1,4 +1,4 @@
-package org.example.CreationalPatterns.Singleton;
+package org.example.CreationalPatterns.SingletonPattern;
 
 public class ShittestSingleTonImpl {
 

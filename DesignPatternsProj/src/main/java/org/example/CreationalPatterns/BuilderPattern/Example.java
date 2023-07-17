@@ -64,3 +64,12 @@ public class Example {
         System.out.println(pizza);
     }
 }
+/*
+ one key thing to observe is, in the builder pattern we return the same type of that class for get/set methods.
+
+ (Note For WFGuys :
+    There is a class called SimpleCriteriaBuilder.java in CT source code. You can refer that for better clarity.
+   )
+
+
+ */

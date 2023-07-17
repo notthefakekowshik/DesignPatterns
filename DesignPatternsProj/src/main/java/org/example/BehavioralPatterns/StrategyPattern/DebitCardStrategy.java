@@ -1,4 +1,4 @@
-package org.example.StrategyPattern;
+package org.example.BehavioralPatterns.StrategyPattern;
 
 public class DebitCardStrategy implements Strategy{
 

@@ -1,4 +1,4 @@
-package org.example.CompositePattern;
+package org.example.StructualPatterns.CompositePattern;
 
 public class Developer implements Employee{
 
