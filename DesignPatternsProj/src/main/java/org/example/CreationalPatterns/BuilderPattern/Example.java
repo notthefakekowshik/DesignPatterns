@@ -1,4 +1,4 @@
-package org.example.BuilderPattern;
+package org.example.CreationalPatterns.BuilderPattern;
 class Pizza {
     private String dough;
     private String sauce;
