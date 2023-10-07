@@ -1,0 +1,7 @@
+.idea/
+.ideaDataSources/
+.dataSources/
+*.iml
+*.ipr
+*.iws
+DesignPatternsProj/target/*
