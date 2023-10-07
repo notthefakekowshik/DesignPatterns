@@ -44,7 +44,7 @@ class ConcreteProductB2 implements ProductB {
 }
 
 // Abstract factory
-interface AbstractFactory {
+interface   AbstractFactory {
     ProductA createProductA();
 
     ProductB createProductB();

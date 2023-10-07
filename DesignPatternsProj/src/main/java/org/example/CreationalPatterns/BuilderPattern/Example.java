@@ -69,7 +69,7 @@ public class Example {
 
  (Note For WFGuys :
     There is a class called SimpleCriteriaBuilder.java in CT source code. You can refer that for better clarity.
-   )
+  )
 
 
  */

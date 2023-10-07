@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Subject {
-    List<Observer> listOfObservers = new ArrayList<Observer>();
+    List<Observer> listOfObservers = new ArrayList<>();
     int count;
     public int getCount() {
         return this.count;

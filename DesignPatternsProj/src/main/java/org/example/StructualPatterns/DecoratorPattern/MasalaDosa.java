@@ -8,7 +8,7 @@ public class MasalaDosa extends DosaDecorator{
 
     @Override
     public String getDetails() {
-        return "Masala Dosa";
+        return "Plain Dosa is decorated with Masala Dosa";
     }
 
     @Override

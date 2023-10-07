@@ -7,8 +7,8 @@ public class Main {
         dosa1 = new OnionDosa(dosa1);
         System.out.println(dosa1.getDetails() + " and the price is " + dosa1.getPrice());
 
-//        dosa1 = new MasalaDosa(dosa1);
-//        System.out.println(dosa1.getDetails() + " and the price is " + dosa1.getPrice());
+        dosa1 = new MasalaDosa(dosa1);
+        System.out.println(dosa1.getDetails() + " and the price is " + dosa1.getPrice());
     }
 }
 /*
