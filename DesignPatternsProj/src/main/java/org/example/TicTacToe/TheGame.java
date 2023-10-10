@@ -1,12 +1,10 @@
 package org.example.TicTacToe;
 
-import java.sql.SQLOutput;
+
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
-import org.example.TicTacToe.Exceptions.CantPlacePieceException;
 import org.example.TicTacToe.Exceptions.InvalidBoardSizeException;
 import org.example.TicTacToe.Physical_Entities.Board;
 import org.example.TicTacToe.Physical_Entities.PieceCircle;
