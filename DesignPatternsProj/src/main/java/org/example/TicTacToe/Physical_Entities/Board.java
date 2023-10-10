@@ -3,9 +3,8 @@ package org.example.TicTacToe.Physical_Entities;
 import java.util.ArrayList;
 import java.util.List;
 
-import javafx.util.Pair;
 import org.example.TicTacToe.Exceptions.InvalidBoardSizeException;
-
+import org.example.TicTacToe.Utils.Pair;
 
 public class Board {
     private int size;
