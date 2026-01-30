@@ -99,7 +99,7 @@ public class HelpDeskExample {
         HelpDeskHandler managerialApprovalHandler = new ManagerialApprovalHandler();
 
         // Set up the chain of responsibility
-        //basicValidationHandler.setNextHandler(technicalSupportHandler);
+        basicValidationHandler.setNextHandler(technicalSupportHandler);
         technicalSupportHandler.setNextHandler(managerialApprovalHandler);
 
         // Create a help desk ticket

@@ -1,0 +1,57 @@
+Flight Management System - Class Diagram
+===================================
+
++----------------+       +----------------+       +----------------+
+|    Airport     |       |    Aircraft    |       |      User      |
++----------------+       +----------------+       +----------------+
+| - code         |       | - id           |       | - id           |
+| - name         |       | - model        |       | - name         |
+| - city         |       | - regNumber    |       | - email        |
+| - country      |       | - capacity     |       | - phone        |
++----------------+       | - status       |       | - role         |
+                         +----------------+       +----------------+
+                                 |                        |
+                                 |                        |
+                                 v                        |
++----------------+       +----------------+               |
+|     Flight     |------>|      Seat      |               |
++----------------+       +----------------+               |
+| - flightNumber |       | - seatNumber   |               |
+| - origin       |       | - seatClass    |               |
+| - destination  |       | - status       |               |
+| - departureTime|       +----------------+               |
+| - arrivalTime  |                |                       |
+| - aircraft     |                |                       |
+| - status       |                |                       |
++----------------+                |                       |
+        ^                         |                       |
+        |                         v                       v
+        |                +----------------+       +----------------+
+        +----------------|    Booking     |<------|  BookingService|
+                         +----------------+       +----------------+
+                         | - bookingId    |       | + bookFlight() |
+                         | - passenger    |       | + getBooking() |
+                         | - flight       |       | + cancelBooking|
+                         | - seatNumber   |       | + checkIn()    |
+                         | - status       |       +----------------+
+                         | - bookingTime  |
+                         +----------------+
+
++----------------+       +----------------+
+| FlightService  |       |AircraftService |
++----------------+       +----------------+
+| + createFlight |       | + addAircraft()|
+| + getFlight()  |       | + getAircraft()|
+| + searchFlights|       | + updateStatus |
+| + updateStatus |       | + getAvailable |
+| + cancelFlight |       +----------------+
++----------------+
+
+Enumerations:
+=============
+FlightStatus: SCHEDULED, BOARDING, DEPARTED, IN_AIR, LANDED, DELAYED, CANCELLED
+AircraftStatus: AVAILABLE, IN_SERVICE, MAINTENANCE, RETIRED
+SeatClass: ECONOMY, PREMIUM_ECONOMY, BUSINESS, FIRST
+SeatStatus: AVAILABLE, RESERVED, OCCUPIED, BLOCKED
+UserRole: PASSENGER, CREW, ADMIN, PILOT
+BookingStatus: CONFIRMED, CANCELLED, CHECKED_IN 

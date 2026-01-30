@@ -12,6 +12,6 @@ public class TemplateDemo {
         cricketGame = new Chess();
         cricketGame.play();
 
-        PrintWriter
+        //PrintWriter
     }
 }

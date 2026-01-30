@@ -17,13 +17,12 @@ public class Subject {
             shouldNotify();
         }
     }
-    public void setConsumer(Observer name)
-    {
+
+    public void setConsumer(Observer name) {
         this.listOfObservers.add(name);
     }
 
-    public List<Observer> getListOfObservers()
-    {
+    public List<Observer> getListOfObservers() {
         return this.getListOfObservers();
     }
 

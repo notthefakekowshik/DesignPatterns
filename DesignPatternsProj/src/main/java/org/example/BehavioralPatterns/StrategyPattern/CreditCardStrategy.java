@@ -7,7 +7,4 @@ public class CreditCardStrategy implements Strategy{
         System.out.println("made payment using CC");
     }
 
-
-
-
 }

@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Dosa dosa1 = new PlainDosa();
+        System.out.println(dosa1.getDetails() + " and the price is " + dosa1.getPrice());
         dosa1 = new OnionDosa(dosa1);
         System.out.println(dosa1.getDetails() + " and the price is " + dosa1.getPrice());
 
@@ -11,6 +12,7 @@ public class Main {
         System.out.println(dosa1.getDetails() + " and the price is " + dosa1.getPrice());
     }
 }
+
 /*
 Decorator pattern :
 modify the state of the object dynamically.

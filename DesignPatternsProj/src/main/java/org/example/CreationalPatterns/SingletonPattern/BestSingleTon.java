@@ -1,6 +1,12 @@
 package org.example.CreationalPatterns.SingletonPattern;
 
-public class BestSingleTon {
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class BestSingleTon implements Serializable {
 
     public static BestSingleTon bestSingleTon;
     private BestSingleTon(){}
@@ -15,6 +21,11 @@ public class BestSingleTon {
                 }
             }
         }
+
         return bestSingleTon;
+    }
+
+    private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
+        out.defaultWriteObject();
     }
 }

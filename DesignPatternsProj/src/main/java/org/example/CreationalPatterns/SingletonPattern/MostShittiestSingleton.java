@@ -11,10 +11,15 @@ class InstanceProvider {
         }
         return instanceProvider;
     }
+
 }
 public class MostShittiestSingleton {
 
     public static void main(String[] args) {
+        InstanceProvider instanceProvider = InstanceProvider.getInstanceProvider();
+        System.out.println(instanceProvider.hashCode());
+        InstanceProvider instanceProvider2 = InstanceProvider.getInstanceProvider();
+        System.out.println(instanceProvider2.hashCode());
 
     }
 }

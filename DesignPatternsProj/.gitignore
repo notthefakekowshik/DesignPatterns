@@ -6,3 +6,5 @@
 *.iws
 DesignPatternsProj/target/*
 */target/*
+target/*
+.DS_Store

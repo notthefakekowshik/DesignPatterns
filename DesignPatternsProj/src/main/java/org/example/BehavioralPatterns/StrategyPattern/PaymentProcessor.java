@@ -7,8 +7,7 @@ public class PaymentProcessor {
         this.strategy = strategy;
     }
 
-    public void makePayment()
-    {
+    public void makePayment() {
         strategy.makePayment();
     }
 

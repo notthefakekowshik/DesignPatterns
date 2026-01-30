@@ -14,6 +14,7 @@ public class Main {
 }
 /*
 
+Separates an abstraction from its implementation so that the two can vary independently.
 this will let you split a large class and set of classes which are closely related into hierarchies.
 for example, assume that there is an interface called processor and there are classes which will implement this. They are
 1. Intel i9
