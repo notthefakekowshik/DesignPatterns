@@ -1,0 +1,57 @@
+Essentially: Re-implement java.util.concurrent.ScheduledExecutorService or a DelayQueue
+
+The Scenario:
+"I want to schedule tasks to run in the future." scheduler.schedule(Runnable task, long delay, TimeUnit unit)
+
+Why this is a "Gold Mine" for Interviews:New Data Structure:
+1.You cannot use a FIFO Queue (LinkedList/ArrayDeque) anymore.
+2. You need a Priority Queue (Min-Heap) to ensure the task with the earliest execution time is always at the head.Concurrency Trap: How does a thread wait for "10 minutes" but wake up immediately if a new task is scheduled to run in "1 second"? (Hint: Thread.sleep() is wrong).
+
+Staff-Level Optimization: For massive scale (millions of timers), Priority Queues ($O(\log N)$) become too slow.
+This leads to the Hierarchical Timing Wheel ($O(1)$), used by Kafka, Netty, and Linux.
+
+
+------
+
+Phase 1: The Mid-Level Approach (The Polling Trap)
+Most candidates start here.
+
+Structure:
+
+A List<Task> to store tasks.
+
+A background thread that wakes up every 100ms (polling) to check if any task is due.
+
+Why it fails:
+
+Imprecise: If you sleep for 100ms, a task due in 1ms waits 99ms.
+
+Wasteful: If the next task is due in 1 hour, checking every 100ms burns CPU for no reason.
+
+-----
+
+Phase 2: The Senior Approach (Condition Variables)
+This is the standard expectation for SDE-2.
+
+The Design:
+
+Queue: Use a PriorityQueue sorted by executionTime.
+
+Head = The task that needs to run soonest.
+
+The Worker Thread:
+
+Peeks at the Head.
+
+Calculates delay = head.time - now.
+
+Calls condition.awaitNanos(delay). (It sleeps exactly until the task is due).
+
+The "Aha!" Moment: What if the thread is sleeping for 1 hour, and you insert a new task due in 5 minutes?
+
+The schedule() method must call lock.notify() (or condition.signal()) to wake up the sleeping thread.
+
+The thread wakes up, re-checks the Head, sees the new 5-minute task, and goes back to sleep for just 5 minutes.
+
+
+-------
