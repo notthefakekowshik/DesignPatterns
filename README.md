@@ -1,3 +1,11 @@
+SOLID Principle : 
+1. Solid
+2. open/closed -> open for extension, closed for modification
+3. LSP
+4. Interface Segregation
+5. Dependency inversion
+
+
 DesignPatterns are mainly classied into three types : 
 1. Creational pattern
 2. Structural pattern
